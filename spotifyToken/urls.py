@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from accessToken.views import getEmail, getToken, requestToken
+from accessToken.views import getAvailableDevices, getEmail, getToken, requestToken
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('callback/', getToken),
     path("profile/", getEmail),
     path('requestaccess/', requestToken),
+    path("devices/", getAvailableDevices),
 
 ]

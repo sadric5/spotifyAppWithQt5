@@ -30,6 +30,7 @@ def update_token(data):
         """.format(data["access_token"], int(time.time())+data["expires_in"], data["scope"])
 	mycursor.execute(sql)
 	my_db.commit()
+	
 
 def fetch_token(id):
 	sql = """

@@ -5,7 +5,7 @@ import hashlib
 response_type = "code"
 redirect_url = "http://localhost:8000/callback"
 state = ''
-scope = "user-read-email user-read-recently-played"
+scope = "user-read-email user-read-playback-state user-modify-playback-state"
 url = "https://accounts.spotify.com/authorize?"
 state = hashlib.sha256("spotify King".encode()).hexdigest()
 # print(state)
